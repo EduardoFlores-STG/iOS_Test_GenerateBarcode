@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BTk-Vu-iQM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-z3-yhz">
+                                <rect key="frame" x="222" y="207" width="157" height="30"/>
+                                <state key="normal" title="Read Existing Barcode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_readBarcode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M3X-7t-MYE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TYPE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfi-J8-DNq">
+                                <rect key="frame" x="16" y="119" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VALUE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1A-hI-DuQ">
+                                <rect key="frame" x="16" y="148" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-SN-zbG">
+                                <rect key="frame" x="221" y="285" width="158" height="30"/>
+                                <state key="normal" title="Generate new Barcode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_generateNewBarcode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bIv-cz-lNn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vfi-J8-DNq" firstAttribute="leading" secondItem="X1A-hI-DuQ" secondAttribute="leading" id="6db-Oq-3iY"/>
+                            <constraint firstItem="Vfi-J8-DNq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="99" id="97d-yb-FKm"/>
+                            <constraint firstAttribute="centerX" secondItem="V0p-z3-yhz" secondAttribute="centerX" constant="-0.5" id="AcJ-1m-zMI"/>
+                            <constraint firstItem="Vfi-J8-DNq" firstAttribute="trailing" secondItem="X1A-hI-DuQ" secondAttribute="trailing" id="IvL-Di-ppN"/>
+                            <constraint firstAttribute="centerX" secondItem="ysf-SN-zbG" secondAttribute="centerX" id="NAD-oW-7vO"/>
+                            <constraint firstItem="X1A-hI-DuQ" firstAttribute="top" secondItem="Vfi-J8-DNq" secondAttribute="bottom" constant="8" id="OIL-jp-H2r"/>
+                            <constraint firstAttribute="centerY" secondItem="ysf-SN-zbG" secondAttribute="centerY" id="RaB-Or-mdu"/>
+                            <constraint firstItem="Vfi-J8-DNq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eRi-Zg-PRJ"/>
+                            <constraint firstItem="ysf-SN-zbG" firstAttribute="top" secondItem="V0p-z3-yhz" secondAttribute="bottom" constant="48" id="kzX-jF-PYd"/>
+                            <constraint firstItem="Vfi-J8-DNq" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="sZu-E1-Oyw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rn1-Cg-g2U"/>
+                    <connections>
+                        <outlet property="buttonOutlet_generateNewBarcode" destination="ysf-SN-zbG" id="OVK-Lf-kZy"/>
+                        <outlet property="label_barcodeType" destination="Vfi-J8-DNq" id="xbU-uu-u4P"/>
+                        <outlet property="label_barcodeValue" destination="X1A-hI-DuQ" id="4fj-ux-FBC"/>
+                        <segue destination="9tX-XO-IvG" kind="show" identifier="segueGenerateNewBarcode" id="fRr-Sc-3RW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-368"/>
+        </scene>
+        <!--Barcode View Controller-->
+        <scene sceneID="w8L-XG-V4t">
+            <objects>
+                <viewController id="9tX-XO-IvG" customClass="BarcodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7K-V9-qjw"/>
+                        <viewControllerLayoutGuide type="bottom" id="YTk-oC-W26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nvZ-d8-29B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAe-g3-Wkx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAe-g3-Wkx" secondAttribute="trailing" constant="-16" id="KOh-lk-IwP"/>
+                            <constraint firstItem="FAe-g3-Wkx" firstAttribute="leading" secondItem="nvZ-d8-29B" secondAttribute="leadingMargin" constant="-16" id="dXw-0k-Ch7"/>
+                            <constraint firstItem="YTk-oC-W26" firstAttribute="top" secondItem="FAe-g3-Wkx" secondAttribute="bottom" id="rd4-JY-YD6"/>
+                            <constraint firstItem="FAe-g3-Wkx" firstAttribute="top" secondItem="W7K-V9-qjw" secondAttribute="bottom" constant="-64" id="tIB-ZD-sdz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FAe-g3-Wkx" id="WSa-Kz-Zcp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAe-1V-d9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976" y="-368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1xF-Jb-n4Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTk-Vu-iQM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="siY-bE-YJh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="aM9-UH-fW0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="our-T9-E5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-368"/>
+        </scene>
+    </scenes>
+</document>
